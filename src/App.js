@@ -1,17 +1,19 @@
 import './App.css';
-import Buttons from "./buttons"
+import ButtonsContainer from './buttonsContainer';
+import Header from "./header";
 
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <main className="App_container">
-        <Buttons name="disappear" />
-        <Buttons name="collapse" />
-        <Buttons name="spin" />
-        <Buttons name="stand" />
-        <Buttons name="minus" />
-        <Buttons name="basic" />
+        <ButtonsContainer name="disappear" />
+        <ButtonsContainer name="collapse" />
+        <ButtonsContainer name="spin" />
+        <ButtonsContainer name="stand" />
+        <ButtonsContainer name="minus" />
+        <ButtonsContainer name="basic" />
       </main>
     </div>
   );

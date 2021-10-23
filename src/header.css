@@ -1,0 +1,40 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    background-color: grey;
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+.header_button {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.button {
+    position: absolute;
+    left: 50%;
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+}
+
+.button.one {
+    top: 1rem;
+    transform: translateX(-50%);
+}
+
+.button.two {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.button.three {
+    bottom: 1rem;
+    transform: translateX(-50%);
+}

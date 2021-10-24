@@ -20,7 +20,7 @@
     position: absolute;
     left: 50%;
     width: 4rem;
-    height: 0.5rem;
+    height: 0.4rem;
     background-color: #f5f5f5;
     border-radius: 0.5rem;
 }
@@ -37,4 +37,88 @@
 .button.three {
     bottom: 1rem;
     transform: translateX(-50%);
+}
+
+/* <---- Header Button ----> */
+
+.header.button.one {
+    animation: playButton1 6s ease infinite;
+}
+
+.header.button.two {
+    animation: playButton2 6s ease infinite;
+}
+.header.button.three {
+    animation: playButton3 6s ease infinite;
+}
+.header.button {
+    animation-delay: 3s;
+}
+
+@keyframes playButton1 {
+    /* Animation 1 Normal */
+    0% {
+        top: 1rem;
+        transform: translateX(-50%);
+    }
+    10% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    30% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    40% {
+        top: 1rem;
+        transform: translateX(-50%); 
+    }
+}
+
+/* BUTTON ANIMATION 2 */
+@keyframes playButton2 {
+    /* Animation 1 Normal */
+    0% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    30% {
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%); 
+    }
+}
+
+/* BUTTON ANIMATION 3 */
+@keyframes playButton3 {
+    /* Animation 1 Normal */
+    0% {
+        bottom: 1rem;
+        transform: translateX(-50%);
+    }
+    10% {
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+    }
+    20% {
+        bottom: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+    30% {
+        bottom: 50%;
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    40% {
+        bottom: 1rem;
+        transform: translateX(-50%); 
+    }
 }

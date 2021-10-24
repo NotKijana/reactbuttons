@@ -9,7 +9,7 @@ class Button extends React.Component {
 
         this.handleClick = this.handleClick.bind(this);
     }
-
+    
     handleClick() {
         this.setState(previousState => ({
             open: !previousState.open

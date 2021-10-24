@@ -12,7 +12,7 @@ import Button from "./button";
 function Header() {
     return(
         <div className='header'>
-            <Button currentClass="header_button" name='header' />
+            <Button currentClass="header_button open" name='header' />
             <h1 className="header_title">amburgers</h1>
         </div>
     )

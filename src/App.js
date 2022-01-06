@@ -1,17 +1,27 @@
 import './App.css';
-import Buttons from "./buttons"
+import ButtonsContainer from './Containers/ButtonsContainer'
+import Header from './Header/Header';
 
 
 function App() {
   return (
     <div className="App">
+      <Header />
+      <div className="App_welcome">
+        <h2 className="App_welcome--main">
+          Simple CSS-animated hamburgers
+        </h2>
+        <p className="App_welcome--sub">
+          Click (or tap) each one to see the magic
+        </p> 
+      </div>
       <main className="App_container">
-        <Buttons name="disappear" />
-        <Buttons name="collapse" />
-        <Buttons name="spin" />
-        <Buttons name="stand" />
-        <Buttons name="minus" />
-        <Buttons name="basic" />
+        <ButtonsContainer name="disappear" />
+        <ButtonsContainer name="collapse" />
+        <ButtonsContainer name="spin" />
+        <ButtonsContainer name="stand" />
+        <ButtonsContainer name="minus" />
+        <ButtonsContainer name="basic" />
       </main>
     </div>
   );

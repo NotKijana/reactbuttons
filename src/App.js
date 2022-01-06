@@ -1,6 +1,6 @@
 import './App.css';
-import ButtonsContainer from './buttonsContainer';
-import Header from "./header";
+import ButtonsContainer from './Containers/ButtonsContainer'
+import Header from './Header/Header';
 
 
 function App() {

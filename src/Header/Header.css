@@ -69,11 +69,15 @@
         top: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
     }
-    30% {
+    70% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    80% {
         top: 50%;
         transform: translate(-50%, -50%) rotate(0deg);
     }
-    40% {
+    100% {
         top: 1rem;
         transform: translateX(-50%); 
     }
@@ -91,7 +95,12 @@
         opacity: 0;
         transform: translate(-50%, -50%);
     }
-    30% {
+    70% {
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    80% {
         top: 50%;
         opacity: 1;
         transform: translate(-50%, -50%); 
@@ -113,11 +122,15 @@
         bottom: 50%;
         transform: translate(-50%, 50%) rotate(-45deg);
     }
-    30% {
+    70% {
+        bottom: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+    80% {
         bottom: 50%;
         transform: translate(-50%, 50%) rotate(0deg);
     }
-    40% {
+    100% {
         bottom: 1rem;
         transform: translateX(-50%); 
     }

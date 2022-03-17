@@ -1,28 +1,37 @@
-import './App.css';
-import ButtonsContainer from './Containers/ButtonsContainer'
-import Header from './Header/Header';
+import { useState } from 'react';
+import './styles/index.scss';
+import BurgerContainer from './components/BurgerContainer';
+import Burger from './components/Burger';
 
 
 function App() {
+  const [isDarkmode, setDarkmode] = useState(true);
+
   return (
-    <div className="App">
-      <Header />
-      <div className="App_welcome">
-        <h2 className="App_welcome--main">
-          Simple CSS-animated hamburgers
-        </h2>
-        <p className="App_welcome--sub">
-          Click (or tap) each one to see the magic
-        </p> 
-      </div>
-      <main className="App_container">
-        <ButtonsContainer name="disappear" />
-        <ButtonsContainer name="collapse" />
-        <ButtonsContainer name="spin" />
-        <ButtonsContainer name="stand" />
-        <ButtonsContainer name="minus" />
-        <ButtonsContainer name="basic" />
-      </main>
+    <div className={`App ${!isDarkmode && 'light'}`}>
+        <header>
+              <Burger currentClass="header_button open" burgerType='header' />
+              <h1 className="">amburgers</h1>
+              <button onClick={() => setDarkmode(!isDarkmode)} />
+        </header>
+
+        <div className="">
+          <h2 className="">
+            Simple CSS-animated hamburgers
+          </h2>
+          <p className="">
+            Click (or tap) each one to see the magic
+          </p> 
+        </div>
+
+        <main className="">
+          <BurgerContainer burgerType="disappear" />
+          <BurgerContainer burgerType="collapse" />
+          <BurgerContainer burgerType="spin" />
+          <BurgerContainer burgerType="stand" />
+          <BurgerContainer burgerType="minus" />
+          <BurgerContainer burgerType="basic" />
+        </main>
     </div>
   );
 }

@@ -1,7 +1,6 @@
-import React from 'react'; 
-import './Button.css';
+import { Component } from 'react'; 
 
-class Button extends React.Component {
+class Burger extends Component {
     constructor(props) {
         super(props);
         this.state = {open: true};
@@ -17,7 +16,9 @@ class Button extends React.Component {
     }
     render() {
         return (    
-            <div className={this.props.currentClass + " " + this.props.name + " "  + (this.state.open ? 'open' : 'closed')} onClick={this.handleClick}>
+            <div className={this.props.currentClass + " " + this.props.burgerType + " "  
+                + (this.state.open ? 'open' : 'closed')} onClick={this.handleClick}
+            >
                 <div className={'button one ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed')}></div>
                 <div className={'button two ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed') }></div>
                 <div className={'button three ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed')}></div>
@@ -26,4 +27,4 @@ class Button extends React.Component {
     }
 }
 
-export default Button;
+export default Burger;

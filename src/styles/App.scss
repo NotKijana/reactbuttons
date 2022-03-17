@@ -1,8 +1,4 @@
-.App {
-  min-height: 100vh;
-  position: relative;
-}
-
+// Minimize All Below
 .App_container {
   display: grid;
   grid-template-columns:  repeat(auto-fit, minmax(25rem, 1fr));

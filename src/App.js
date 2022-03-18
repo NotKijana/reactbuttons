@@ -17,11 +17,11 @@ function App() {
               <div className={'topping three'}></div>
             </div>
             
-            <span>amburgers</span>
+            <span className='txt-xl'>amburgers</span>
           </h1>
           <button onClick={() => setDarkmode(!isDarkmode)} className='hidden' />
 
-          <div className="header_sub">
+          <div className="header_sub txt-center">
             <h2 className="txt-xl">
               Simple CSS-animated hamburgers
             </h2>

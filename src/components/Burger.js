@@ -18,7 +18,7 @@ class Burger extends Component {
     render() {
         const {type} = this.props;
         return (    
-            <div className='container' onClick={this.handleClick}>
+            <div className={'container '+ type} onClick={this.handleClick}>
                 <h2 className='name txt-l'>
                     {type}
                 </h2>

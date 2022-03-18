@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './styles/index.scss';
-import BurgerContainer from './components/BurgerContainer';
 import Burger from './components/Burger';
 
 
@@ -9,28 +8,36 @@ function App() {
 
   return (
     <div className={`App ${!isDarkmode && 'light'}`}>
-        <header>
-              <Burger currentClass="header_button open" burgerType='header' />
-              <h1 className="">amburgers</h1>
-              <button onClick={() => setDarkmode(!isDarkmode)} />
+
+        <header className='header'>
+          <h1 className="title">
+            <div className='burger inner'>
+              <div className={'topping one'}></div>
+              <div className={'topping two'}></div>
+              <div className={'topping three'}></div>
+            </div>
+            
+            <span>amburgers</span>
+          </h1>
+          <button onClick={() => setDarkmode(!isDarkmode)} className='hidden' />
+
+          <div className="header_sub">
+            <h2 className="txt-xl">
+              Simple CSS-animated hamburgers
+            </h2>
+            <p className="txt-l">
+              Click (or tap) each one to see the magic
+            </p> 
+          </div>
         </header>
 
-        <div className="">
-          <h2 className="">
-            Simple CSS-animated hamburgers
-          </h2>
-          <p className="">
-            Click (or tap) each one to see the magic
-          </p> 
-        </div>
-
-        <main className="">
-          <BurgerContainer burgerType="disappear" />
-          <BurgerContainer burgerType="collapse" />
-          <BurgerContainer burgerType="spin" />
-          <BurgerContainer burgerType="stand" />
-          <BurgerContainer burgerType="minus" />
-          <BurgerContainer burgerType="basic" />
+        <main className="burgers">
+          <Burger type="disappear" />
+          <Burger type="collapse" />
+          <Burger type="spin" />
+          <Burger type="stand" />
+          <Burger type="minus" />
+          <Burger type="basic" />
         </main>
     </div>
   );

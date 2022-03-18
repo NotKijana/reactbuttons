@@ -14,14 +14,21 @@ class Burger extends Component {
             open: !previousState.open
         }))
     }
+
     render() {
+        const {type} = this.props;
         return (    
-            <div className={this.props.currentClass + " " + this.props.burgerType + " "  
-                + (this.state.open ? 'open' : 'closed')} onClick={this.handleClick}
-            >
-                <div className={'button one ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed')}></div>
-                <div className={'button two ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed') }></div>
-                <div className={'button three ' + this.props.name + ' ' + (this.state.open ? 'open' : 'closed')}></div>
+            <div className='container' onClick={this.handleClick}>
+                <h2 className='name txt-l'>
+                    {type}
+                </h2>
+                <input type="checkbox" name={ type } className='hidden' id={ type } />
+
+                <label htmlFor={type} className={`burger ${type}`}>
+                    <div className={'topping one ' + type + ' ' + (this.state.open ? 'open' : 'closed')}></div>
+                    <div className={'topping two ' + type + ' ' + (this.state.open ? 'open' : 'closed') }></div>
+                    <div className={'topping three ' + type + ' ' + (this.state.open ? 'open' : 'closed')}></div>
+                </label>
             </div>
         )
     }

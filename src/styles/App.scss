@@ -1,22 +1,7 @@
-// Minimize All Below
-.App_container {
-  display: grid;
-  grid-template-columns:  repeat(auto-fit, minmax(25rem, 1fr));
-  grid-auto-flow: dense;
-  width: 100%;
-  height: 70vh;
-}
-
-.App_welcome {
-  text-align: center;
-  padding: 3rem 0;
-}
-
-.App_welcome--main {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.App_welcome--sub {
-  font-size: 1.2rem;
+.App {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #f7f7f7;
 }

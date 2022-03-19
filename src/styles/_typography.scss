@@ -15,6 +15,7 @@ body {
 .name {
     text-transform: capitalize;
     font-weight: 400;
+    text-shadow: 2px 2px 3px rgba($black, 0.95);
 }
 
 .disappear {
@@ -27,11 +28,11 @@ body {
     color: $orange;
 }
 .stand {
-    color: $yellow;
+    color: $pink;
 }
 .minus {
-    color: $orange;
+    color: $yellow;
 }
 .basic {
-    color: $green;
+    color: $orange;
 }

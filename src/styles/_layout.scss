@@ -14,6 +14,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding-top: 2rem;
+    margin-bottom: 2rem;
     color: $grey;
 }
 .title {
@@ -23,20 +24,28 @@ body {
 
 .burgers {
     margin-top: 0.2rem;
-    display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(22rem, 1fr));
-    grid-auto-flow: dense;
-    grid-gap: 1px;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 .container {
     position: relative;
-    aspect-ratio: 1/1;
-    width: 100%;
+
+    width: 20%;
+    padding-top: 8.5rem;
+    padding-bottom: 7rem;
+    
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include responsive(mobile) {
+        width: 50%;
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+    }
 
     &_title {
         position: relative;
@@ -46,21 +55,27 @@ body {
     .topping {
         &.disappear {
             background-color: $green;
+            box-shadow: 1px 1px 3px rgba($green, 0.2);
         }
         &.collapse {
             background-color: $yellow;
+            box-shadow: 1px 1px 3px rgba($yellow, 0.2);
         }
         &.spin {
             background-color: $orange;
+            box-shadow: 1px 1px 3px rgba($orange, 0.2);
         }
         &.stand {
-            background-color: $yellow;
+            background-color: $pink;
+            box-shadow: 1px 1px 3px rgba($pink, 0.2);
         }
         &.minus {
-            background-color: $orange;
+            background-color: $yellow;
+            box-shadow: 1px 1px 3px rgba($yellow, 0.2);
         }
         &.basic {
-            background-color: $green;
+            background-color: $orange;
+            box-shadow: 1px 1px 3px rgba($orange, 0.2);
         }
     }
 }

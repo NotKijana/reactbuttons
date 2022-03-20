@@ -8,6 +8,9 @@
     width: 4.5rem;
     height: 3rem;
     cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     &.inner {
         width: 3.5rem;
         height: 3.5rem;
@@ -123,8 +126,6 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        &.two {
-        }
         &.three {
             top: 50%;
             transform: translateY(-50%);
@@ -140,8 +141,6 @@
             left: -0.5rem;
             transform: translateY(-50%) rotate(-45deg);
             width: 3.5rem;
-        }
-        &.two {
         }
         &.three {
             top: 2.65rem;
@@ -160,8 +159,6 @@
             left: 1.5rem;
             transform: translateY(-50%) rotate(45deg);
             width: 3.5rem;
-        }
-        &.two {
         }
         &.three {
             top: 2.65rem;
@@ -207,8 +204,6 @@
         &.two {
             top: 2.5rem;
             transform: none;
-        }
-        &.three {
         }
     }
 }

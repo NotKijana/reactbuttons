@@ -6,7 +6,7 @@
 .burger {
     position: relative;
     width: 4.5rem;
-    height: 4rem;
+    height: 3rem;
     cursor: pointer;
     &.inner {
         width: 3.5rem;
@@ -132,6 +132,86 @@
     }
 }
 
+/* <---- Arrow Button ----> */
+#arrow:checked + .arrow {
+    .topping {
+        &.one {
+            top: 0.35rem;
+            left: -0.5rem;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 3.5rem;
+        }
+        &.two {
+        }
+        &.three {
+            top: 2.65rem;
+            left: -0.5rem;
+            transform: translateY(-50%) rotate(45deg);
+            width: 3.5rem;
+        }
+    }
+}
+
+/* <---- Arrow Alt -> Button ----> */
+#arrowAlt:checked + .arrowAlt {
+    .topping {
+        &.one {
+            top: 0.35rem;
+            left: 1.5rem;
+            transform: translateY(-50%) rotate(45deg);
+            width: 3.5rem;
+        }
+        &.two {
+        }
+        &.three {
+            top: 2.65rem;
+            left: 1.5rem;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 3.5rem;
+        }
+    }
+}
+
+/* <---- Slide Button ----> */
+.slide {
+    .topping {
+        &.two {transition: all 0.15s ease-in-out;}
+    }
+}
+#slide:checked + .slide  {
+    .topping {
+        &.one {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &.two {
+            left: -0.7rem;
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+
+/* <---- Spilled Button ----> */
+.spilled {
+    .topping {transition: all 0.15s ease-in;}
+}
+#spilled:checked + .spilled {
+    .topping {
+        &.one {
+            top: 2.5rem;
+        }
+        &.two {
+            top: 2.5rem;
+            transform: none;
+        }
+        &.three {
+        }
+    }
+}
 
 /* <---- Basic Button ----> */
 .basic {

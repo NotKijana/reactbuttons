@@ -18,21 +18,15 @@ body {
     text-shadow: 2px 2px 3px rgba($black, 0.95);
 }
 
-.disappear {
+.disappear, .spilled, .arrow {
     color: $green;
 }
-.collapse {
+.collapse, .minus, .slide {
     color: $yellow;
 }
-.spin {
+.spin, .basic {
     color: $orange;
 }
-.stand {
+.stand, .arrowAlt {
     color: $pink;
-}
-.minus {
-    color: $yellow;
-}
-.basic {
-    color: $orange;
 }

@@ -51,31 +51,48 @@ body {
         position: relative;
     }
 }
-.burger {
+
+.disappear, .spilled, .arrow {
+    &.topping {
+        background-color: $green;
+        box-shadow: 1px 1px 3px rgba($green, 0.2);
+    }
+    :hover {
+        .topping {
+            background-color: darken($green, 10%);
+        }
+    }
+}
+.collapse, .minus, .slide {
     .topping {
-        &.disappear {
-            background-color: $green;
-            box-shadow: 1px 1px 3px rgba($green, 0.2);
+        background-color: $yellow;
+        box-shadow: 1px 1px 3px rgba($yellow, 0.2);
+    }
+    :hover {
+        .topping {
+            background-color: darken($yellow, 10%);
         }
-        &.collapse {
-            background-color: $yellow;
-            box-shadow: 1px 1px 3px rgba($yellow, 0.2);
+    }
+}
+.spin, .basic {
+    &.topping {
+        background-color: $orange;
+        box-shadow: 1px 1px 3px rgba($orange, 0.2);
+    }
+    :hover {
+        .topping {
+            background-color: darken($orange, 10%);
         }
-        &.spin {
-            background-color: $orange;
-            box-shadow: 1px 1px 3px rgba($orange, 0.2);
-        }
-        &.stand {
-            background-color: $pink;
-            box-shadow: 1px 1px 3px rgba($pink, 0.2);
-        }
-        &.minus {
-            background-color: $yellow;
-            box-shadow: 1px 1px 3px rgba($yellow, 0.2);
-        }
-        &.basic {
-            background-color: $orange;
-            box-shadow: 1px 1px 3px rgba($orange, 0.2);
+    }
+}
+.stand, .arrowAlt {
+    &.topping {
+        background-color: $pink;
+        box-shadow: 1px 1px 3px rgba($pink, 0.2);
+    }
+    :hover {
+        .topping {
+            background-color: darken($pink, 10%);
         }
     }
 }

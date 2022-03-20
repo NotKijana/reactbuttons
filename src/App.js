@@ -37,6 +37,10 @@ function App() {
           <Burger type="spin" />
           <Burger type="stand" />
           <Burger type="minus" />
+          <Burger type="arrow" />
+          <Burger type="arrowAlt" />
+          <Burger type="slide" />
+          <Burger type="spilled" />
           <Burger type="basic" />
         </main>
     </div>

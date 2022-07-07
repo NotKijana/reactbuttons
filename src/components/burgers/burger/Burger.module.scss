@@ -1,0 +1,347 @@
+@import '../../../styles/abstract/abstract.scss';
+.burgers {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-auto-rows: 25rem;
+    justify-content: center;
+    height: fit-content;
+    margin: 3rem auto 5rem;
+    padding: 0 3rem;
+
+    @include responsive(tablet) {
+        grid-template-columns: repeat(auto-fit, 20rem);
+        grid-auto-rows: 20rem;
+        padding: 0 2rem;
+    }
+    @include responsive(mobile) {
+        grid-template-columns: repeat(auto-fit, 18rem);
+        grid-auto-rows: 18rem;
+        padding: 0rem;
+    }
+}
+
+.wrapper {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    filter: grayscale(15%);
+}
+
+.burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 5rem;
+    width: 4rem;
+    position: relative;
+    transition: opacity 0.15s ease;
+    &:hover {opacity: 0.8;}
+    &_topping {
+        position: absolute;
+        background-color: white;
+        width: 4rem;
+        height: 0.2rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 0.5rem;
+        transition: all 0.1s ease-in;
+
+        &.one {top: 25%;}
+        &.two {
+            top: 50%;
+        }
+        &.three {top: 75%;}
+    }
+
+}
+
+// TYPES OF BURGERS START
+#spin {transition: all 0.15s ease-out;}
+#stand {
+    transition: all 0.07s ease-in;
+    .burger_topping {transition: all 0.08s ease 0.07s;}
+}
+#slide {
+    .two {transition: all 0.15s ease-in-out;}
+}
+.spilled {
+    transition: all 0.08s ease-in;
+}
+.basic {transition: none;}
+
+.open {
+    
+    &.disappear {
+        transition: transform 0.07s ease-in 0.09s, top 0.09s ease-in;
+        
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &.two {
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &.collapse {
+        transition: transform 0.07s ease-in 0.09s, top 0.09s ease-in;
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &.two {
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &.spin {
+        transition: all 0.25s ease 0.1s;
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(315deg);
+        }
+        &.two {
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-315deg);
+        }
+    }
+
+    &#stand {transform: rotate(90deg);}
+    &.stand {
+        transition: all 0.2s ease;
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &.two {
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    &.minus {
+        &.one {
+            top: 50%;
+        }
+        &.three {
+            top: 50%;
+        }
+    }
+
+    &.arrow {
+        &.one {
+            top: 33%;
+            left: 0.95rem;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 2.5rem;
+        }
+        &.two {z-index: 3;}
+        &.three {
+            top: 67%;
+            left: 0.95rem;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 2.5rem;
+        }
+    }
+
+    &.arrowAlt {
+        &.one {
+            top: 32%;
+            left: 2.98rem;
+            right: 0rem;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 2.5rem;
+        }
+        &.two {z-index: 3;}
+        &.three {
+            top: 67%;
+            left: 2.98rem;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 2.5rem;
+        }
+    }
+
+    &.slide {
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &.two {
+            left: -0.7rem;
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &.spilled {
+        &.one {
+            top: 75%;
+        }
+        &.two {
+            top: 75%;
+            // transform: none;
+        }
+    }
+
+    &.basic {
+        &.one {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &.two {
+            opacity: 0;
+        }
+        &.three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+}
+.title {
+    &.one {animation: playButton1 6s ease infinite;}
+
+    &.two {animation: playButton2 6s ease infinite;}
+
+    &.three {animation: playButton3 6s ease infinite;}
+}
+    // TYPES OF BURGERS END
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.teal { 
+    background-color: teal;
+}
+
+.pink { 
+    background-color: pink;
+}
+
+.orange { 
+    background-color: orange;
+}
+
+.turquoise {
+    background-color: turquoise;
+}
+
+.crimson {
+    background-color: crimson;
+}
+
+@keyframes playButton1 {
+    /* Animation 1 Normal */
+    0% {
+        top: 25%;
+    }
+    10% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    70% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    80% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        top: 25%;
+    }
+}
+
+/* BUTTON ANIMATION 2 */
+@keyframes playButton2 {
+    /* Animation 1 Normal */
+    0% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    70% {
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    80% {
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* BUTTON ANIMATION 3 */
+@keyframes playButton3 {
+    /* Animation 1 Normal */
+    0% {
+        top: 75%;
+    }
+    10% {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    70% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    80% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        top: 75%;
+    }
+}

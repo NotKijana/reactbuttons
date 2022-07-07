@@ -1,0 +1,15 @@
+.footer {
+    position: relative;
+    padding: 1rem 2rem;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+}
+
+.text {
+    font-weight: 500;
+    border-bottom: 2px solid #f7f7f7;
+}

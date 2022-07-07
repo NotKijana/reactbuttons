@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/reactbuttons/static/css/main.f0fcaa18.css",
-    "main.js": "/reactbuttons/static/js/main.54ac5d6c.js",
+    "main.css": "/reactbuttons/static/css/main.b1faf4ca.css",
+    "main.js": "/reactbuttons/static/js/main.a3dea55b.js",
     "static/media/fast_bg.jpg": "/reactbuttons/static/media/fast_bg.87a5e5032f91fd8c4f4e.jpg",
     "index.html": "/reactbuttons/index.html",
-    "main.f0fcaa18.css.map": "/reactbuttons/static/css/main.f0fcaa18.css.map",
-    "main.54ac5d6c.js.map": "/reactbuttons/static/js/main.54ac5d6c.js.map"
+    "main.b1faf4ca.css.map": "/reactbuttons/static/css/main.b1faf4ca.css.map",
+    "main.a3dea55b.js.map": "/reactbuttons/static/js/main.a3dea55b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0fcaa18.css",
-    "static/js/main.54ac5d6c.js"
+    "static/css/main.b1faf4ca.css",
+    "static/js/main.a3dea55b.js"
   ]
 }

@@ -1,0 +1,25 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    h1 {position: relative;}
+}
+
+.link {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    width: fit-content;
+    transition: all 0.15s ease-in;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+        color: rgba(#f7f7f7, 0.8);
+        border-bottom: 1px solid #f7f7f7;
+    }
+}

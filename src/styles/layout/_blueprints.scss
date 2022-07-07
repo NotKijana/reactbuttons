@@ -1,0 +1,13 @@
+body {
+    background-image:linear-gradient(15deg, rgba($black, 0.95), rgba($black, 0.95)), url('../../assets/fast_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: $black;
+}
+
+
+.App {
+    min-height: 100vh;
+    position: relative;
+    color: #f7f7f7;
+}
